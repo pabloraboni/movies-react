@@ -1,0 +1,14 @@
+// Definindo variáveis
+$primary-color: #d57c53;
+$secondary-color: #424242;
+$negative-color: #e84b4b;
+
+.--color-primary{
+    color: $primary-color;
+}
+.--color-gray{
+    color: $secondary-color;
+}
+.--color-negative{
+    color: $negative-color;
+}
