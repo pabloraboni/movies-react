@@ -4,7 +4,7 @@
       @include mx-flex();
       @include mx-flex-column();
       gap: 10px;
-  
+      transition: 0.2s;
       span,
       label {
         font-size: 0.9em;
@@ -32,7 +32,6 @@
       textarea,
       select {
         width: 100%;
-        border: 1px solid #ccc;
         border-radius: 7px;
         display: flex;
         flex-direction: row;
@@ -42,6 +41,9 @@
         font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
         box-sizing: border-box;
         transition: 0.2s;
+        background: transparent;
+        border: 0;
+        color: #fff;
       }
   
       textarea {
@@ -56,9 +58,40 @@
         span{
           position: absolute;
           left: 15px;
+          font-size: 1.6em;
+          cursor: pointer;
+          transition: 0.2s;
         }
         input{
-          padding-left: 40px;
+          padding-left: 50px;
+        }
+      }
+
+      &.--closed{
+        textarea,
+        input[type="tel"],
+        input[type="Text"],
+        input[type="pass"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+          width: 0;
+        }
+        &.--collapse{
+          textarea,
+          input[type="tel"],
+          input[type="Text"],
+          input[type="pass"],
+          input[type="email"],
+          input[type="password"],
+          textarea,
+          select {
+            width: 100%;
+          }   
+          span{
+            font-size: 1.2em;
+          }
         }
       }
 

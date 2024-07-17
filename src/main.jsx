@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx'
 import Home from './pages/Home/Home.jsx';
 import NotFound from './pages/404/NotFound.jsx';
+import Movie from './pages/Movie/Movie.jsx'
+import Search from './pages/Search/Search.jsx'
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
         path:"/",
         element: <Home />
       },
+      {
+        path:"movie/:id",
+        element: <Movie/>
+      },
+      {
+        path:"search",
+        element: <Search/>
+      }
     ]
   }
 ],

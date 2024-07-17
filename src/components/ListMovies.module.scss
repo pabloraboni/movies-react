@@ -4,8 +4,8 @@
     width: 100%;
     @include mx-grid(1);
     @include mx-grid-gap(10);
-    position: relative;
-    min-height: 150px;    
+    row-gap: 30px;
+    position: relative;     
     @include mx-responsive(768px){
         @include mx-grid(4);
     }
@@ -65,7 +65,6 @@
         font-size: 0.7em;
     }
 }
-
 .pr-movie__content{
     width: 100%;
     position: relative;
@@ -75,11 +74,11 @@
     position: absolute;
     width: 100%;
 }
-
 .pr-movie{
     flex:1;  
     transition: 0.2s;  
     position: relative;
+    min-height: 150px;   
     @include mx-flex();
     @include mx-flex-center();
     &:hover{
