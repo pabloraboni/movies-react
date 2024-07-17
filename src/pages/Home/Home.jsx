@@ -1,3 +1,4 @@
+import ListMovies from '../../components/ListMovies'
 import styles from './Home.module.scss'
 
 const Home = () => {
@@ -6,7 +7,8 @@ const Home = () => {
         <>
             <div className="pr-page__content --f-center">
                 <div className={styles["pr-page__home"]}>
-                    <h1>Home</h1>
+                    <h1>Filmes da semana</h1>
+                    <ListMovies/>
                 </div>
             </div>
         </>

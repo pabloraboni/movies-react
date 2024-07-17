@@ -46,8 +46,8 @@ p{
 }
 @media (prefers-color-scheme: light) {
   :root {
-    color: #333;
-    background-color: #fff;
+    color: #ffffff;
+    background-color: $primary-color;
   }
 }
 a{
@@ -98,7 +98,7 @@ header .active {
 }
 .pr-container {
   width: 100%;
-  max-width: 1060px;
+  max-width: 95%;
   margin: 0 auto;  
   padding: 0 20px;
   box-sizing: border-box;

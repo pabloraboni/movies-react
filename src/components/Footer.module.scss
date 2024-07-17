@@ -1,8 +1,7 @@
 @import "../sass/importMixins.scss";
 .pr-box__footer {
 
-  background: #f2f2f2;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #333;
   width: 100%;
 
   .pr-footer__content {
@@ -18,11 +17,11 @@
   p{
     flex: 1;
     margin: 0;
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .pr-footer__logo{
-    color: $primary-color;
+    color: #fff;
   }
   
 }

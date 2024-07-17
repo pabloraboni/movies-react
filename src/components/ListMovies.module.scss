@@ -1,0 +1,108 @@
+@import "../sass/importMixins.scss";
+
+.pr-movies{
+    width: 100%;
+    @include mx-grid(1);
+    @include mx-grid-gap(10);
+    position: relative;
+    min-height: 150px;    
+    @include mx-responsive(768px){
+        @include mx-grid(4);
+    }
+    @include mx-responsive(1024px){
+        @include mx-grid(5);
+    }
+    @include mx-responsive(1919px){
+        @include mx-grid(9);
+    }
+    
+}
+
+.pr-movie__thumb{
+    min-height: 150px;    
+    background-image:url("../assets/movies-image/movie-2.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    transition: 0.2s; 
+    border-radius: 5px;
+    overflow: hidden;   
+}
+.pr-movie__descriptions{    
+    padding: 15px;
+    background: #333;
+    @include mx-flex();
+    @include mx-flex-column();
+    gap:10px;
+    transition: 0.2s;  
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.2s;  
+    border-radius: 5px;
+      
+    p{
+        color: #fff;
+    }
+    .pr-movie__name{
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+    .pr-movie__tags{
+        @include mx-flex();
+        @include mx-flex-row();
+        @include mx-flex-align-center();
+        gap:10px;
+        font-size: 0.7em;
+        span{
+            width: 5px;
+            height: 5px;
+            background: #808080;
+            border-radius: 50%;
+        }
+    }
+    .pr-movie__duration{
+        font-size: 0.7em;
+    }
+}
+
+.pr-movie__content{
+    width: 100%;
+    position: relative;
+    @include mx-flex();
+    @include mx-flex-column();
+    gap:7px;
+    position: absolute;
+    width: 100%;
+}
+
+.pr-movie{
+    flex:1;  
+    transition: 0.2s;  
+    position: relative;
+    @include mx-flex();
+    @include mx-flex-center();
+    &:hover{
+        .pr-movie__content{
+            width: calc(100% + 50px);
+            z-index: 99;
+        }
+        .pr-movie__thumb{
+            min-height: 200px;
+        } 
+        .pr-movie__descriptions{
+            height: auto;
+            padding: 15px;
+        }    
+        &:first-of-type{
+            .pr-movie__content{
+                left: 0;
+            } 
+        } 
+        &:last-of-type{
+            .pr-movie__content{
+                right: 0;
+            } 
+        }  
+    }
+}
