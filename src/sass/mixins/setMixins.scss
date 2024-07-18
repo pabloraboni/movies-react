@@ -186,6 +186,12 @@
     }
 }
 
+@mixin mx-responsivemob($range) {
+
+    @media (max-width: $range) {
+        @content;
+    }
+}
 @mixin mx-responsive($range) {
 
     @media (min-width: $range) {

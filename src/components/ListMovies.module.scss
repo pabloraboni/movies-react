@@ -101,7 +101,6 @@
 }
 .pr-movie__content{
     width: 100%;
-    position: relative;
     @include mx-flex();
     @include mx-flex-column();
     gap:7px;
@@ -115,6 +114,33 @@
     min-height: 150px;   
     @include mx-flex();
     @include mx-flex-center();
+
+    @include mx-responsivemob(768px){
+        .pr-movie__content{
+            position: relative;
+            z-index: 99;
+        }
+        .pr-movie__thumb{
+            min-height: 200px;
+            p{
+                display: none;
+            }
+        } 
+        .pr-movie__descriptions{
+            height: auto;
+            padding: 15px;
+        }    
+        &:first-of-type{
+            .pr-movie__content{
+                left: 0;
+            } 
+        } 
+        &:last-of-type{
+            .pr-movie__content{
+                right: 0;
+            } 
+        } 
+    }
     &:hover{
         .pr-movie__content{
             width: calc(100% + 50px);

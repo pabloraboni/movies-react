@@ -5,13 +5,18 @@
   // border-bottom: 1px solid #333;
   .pr-header__content {
     width: 100%;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    padding: 30px 0;
     box-sizing: border-box;
-    
+    @include mx-flex();
+    @include mx-flex-column();
+    @include mx-flex-center();
+    gap:30px;
+    @include mx-responsive(768px){
+      padding: 20px 0;
+      @include mx-flex-row();
+      @include mx-flex-align-center();
+      @include mx-flex-justify-between();
+    }
 
     form{
       flex: 1;
@@ -59,6 +64,16 @@
   flex-direction: row;
   align-items: center;
   gap: 20px;
+
+  @include mx-responsivemob(768px){
+    width: 100%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    form{
+      max-width: none !important;
+    }
+  }
 
   .pr-menu__item {
     text-decoration: none;
