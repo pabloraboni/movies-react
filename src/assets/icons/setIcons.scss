@@ -22,6 +22,31 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.pr-icon-arrow-expand:before {
+  content: "\e9d4";
+}
+.pr-icon-arrow-expand2:before {
+  content: "\e9dd";
+}
+.pr-icon-arrow-right2:before {
+  content: "\e9fd";
+}
+.pr-icon-arrow-right3:before {
+  content: "\e9ff";
+}
+.pr-icon-movie:before {
+  content: "\e9b2";
+  color: #5f6368;
+}
+.pr-icon-movie2:before {
+  content: "\e9b3";
+}
+.pr-icon-movie3:before {
+  content: "\e9d2";
+}
+.pr-icon-movie4:before {
+  content: "\e9d3";
+}
 .pr-icon-expand:before {
     content: "\e9a9";
 }

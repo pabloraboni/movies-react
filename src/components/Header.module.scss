@@ -2,7 +2,7 @@
 
 .pr-box__header {
   width: 100%;
-  border-bottom: 1px solid #333;
+  // border-bottom: 1px solid #333;
   .pr-header__content {
     width: 100%;
     padding: 20px 0;
@@ -28,17 +28,27 @@
   font-size: 1.7em;
   letter-spacing: 1.5px;
   font-weight: 500;
-  img {
-    width: 200px;
-  }
+  position: relative;
   &:before{
     display: none;
   }
+  @include mx-flex();
+  @include mx-flex-row();
+  @include mx-flex-align-center();
+  gap:10px;
   span{
-    @include mx-flex();
-    @include mx-flex-center();
-    &:before{
-      color: $negative-color;
+    &:first-of-type{
+      @include mx-flex();
+      @include mx-flex-center();
+      &:before{
+        color: $negative-color;
+      }
+    }
+    &:last-of-type{
+      margin-bottom: -20px;
+      &:before{
+        color: $negative-color;
+      }
     }
   }
 }

@@ -17,7 +17,6 @@
     }
     
 }
-
 .pr-movie__thumb{
     min-height: 150px;    
     background-image:url("../assets/movies-image/movie-2.webp");
@@ -27,6 +26,19 @@
     transition: 0.2s; 
     border-radius: 5px;
     overflow: hidden;   
+    position: relative;
+    p{
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        min-height: 50px;
+        padding: 10px 15px;
+        @include mx-flex();
+        @include mx-flex-align-center();
+        background: linear-gradient(0deg, #212121, transparent);
+        color: #fff !important;
+    }
 }
 .pr-movie__descriptions{    
     padding: 15px;
@@ -42,11 +54,11 @@
     border-radius: 5px;
       
     p{
-        color: #fff;
+        color: #fff !important;
     }
     .pr-movie__name{
         font-size: 0.9em;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .pr-movie__tags{
         @include mx-flex();
@@ -61,8 +73,30 @@
             border-radius: 50%;
         }
     }
-    .pr-movie__duration{
+    .pr-movie__stars{
+        @include mx-flex();
+        @include mx-flex-row();
+        @include mx-flex-align-center();
+        gap:5px;
         font-size: 0.7em;
+    }
+    .pr-movie__date{
+        @include mx-flex();
+        @include mx-flex-row();
+        @include mx-flex-align-center();
+        margin-right: auto;
+        gap:5px;
+        font-size: 0.7em;
+    }
+    a{
+        font-size: 1.5em;
+        color: $negative-color;
+        cursor: pointer;
+        transition: 0.2s;
+        transform: scale(1);
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 }
 .pr-movie__content{
@@ -88,6 +122,9 @@
         }
         .pr-movie__thumb{
             min-height: 200px;
+            p{
+                display: none;
+            }
         } 
         .pr-movie__descriptions{
             height: auto;

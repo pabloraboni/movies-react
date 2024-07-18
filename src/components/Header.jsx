@@ -32,6 +32,7 @@ const Header = () => {
         <div className={styles["pr-header__content"]}>
           <NavLink to="/" className={styles["pr-header__logo"]}>
             <span className="pr-icon-pablologo --font-14"></span>
+            <span className="pr-icon-movie3 --font-12"></span>
           </NavLink>
 
           <nav className={styles["pr-box__menu"]}>

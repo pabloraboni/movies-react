@@ -1,13 +1,12 @@
 import { useState, useEffect} from 'react'
-import ListMovies from '../../components/ListMovies'
 import styles from './Home.module.scss'
 
 //components
 import Loading from "../../components/Loading";
+import ListMovies from '../../components/ListMovies'
 
 const moviesURL = import.meta.env.VITE_API
 const apiKey = import.meta.env.VITE_API_KEY
-const folderImages = import.meta.env.VITE_IMG
 
 const Home = () => {
 
