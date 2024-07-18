@@ -17,6 +17,13 @@ const Movie = () => {
     setMovie(data);
   };
 
+  const formatCurrency = (number) => {
+    return number.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+  };
+
   useEffect(() => {
     const movieUrl = `${moviesURL}${id}?${apiKey}`;
     getMovieById(movieUrl);
@@ -38,20 +45,37 @@ const Movie = () => {
                   <p>{movie.original_title}</p>
                 </div>
                 <div className={styles["pr-movie__descriptions"]}>
-                  <p className={styles["pr-movie__name"]}>
-                    {movie.original_title}
-                  </p>
+                  <div className="--wd-100 --frow-centerbetween --row-wrap --fgap-20">
+                    <p className={styles["pr-movie__name"]}>
+                      {movie.original_title}
+                    </p>
+                    <p className={styles["pr-movie__stats"]}>
+                      <span className="pr-icon-clock-2"></span> {movie.runtime}{" "}
+                      min.
+                    </p>
+                  </div>
                   <p className={styles["pr-movie__summary"]}>
                     {movie.overview}
                   </p>
-                  <div className="--wd-100 --frow-center --fgap-20">
-                    <p className={styles["pr-movie__stars"]}>
+                  <div className="--wd-100 --frow-center --row-wrap --fgap-20">
+                    <p className={styles["pr-movie__stats"]}>
+                      <span className="pr-icon-calendar"></span>{" "}
+                      {movie.release_date}
+                    </p>
+                    <p className={styles["pr-movie__stats"]}>
                       <span className="pr-icon-star"></span>{" "}
                       {movie.vote_average}
                     </p>
-                    <p className={styles["pr-movie__date"]}>
-                      <span className="pr-icon-calendar"></span>{" "}
-                      {movie.release_date}
+                  </div>
+                  <div className="pr-line"></div>
+                  <div className="--wd-100 --frow-center --row-wrap --fgap-20">
+                    <p className={styles["pr-movie__stats"]}>
+                      <span className="pr-icon-relatorio"></span> Orçamento:{" "}
+                      {formatCurrency(movie.budget)}
+                    </p>
+                    <p className={styles["pr-movie__stats"]}>
+                      <span className="pr-icon-seo"></span> Receita:{" "}
+                      {formatCurrency(movie.revenue)}
                     </p>
                   </div>
                 </div>

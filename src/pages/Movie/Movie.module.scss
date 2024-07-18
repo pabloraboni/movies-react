@@ -58,49 +58,24 @@
     }
     .pr-movie__name{
         font-size: 1.2em;
-        margin-bottom: 10px;
     }
     .pr-movie__summary{
         font-size: 0.9em;
-        margin-bottom: 20px;
+        margin: 20px 0;
         font-weight: 300;
+        text-align: justify;
     }
-    .pr-movie__tags{
+    .pr-movie__stats{
         @include mx-flex();
         @include mx-flex-row();
         @include mx-flex-align-center();
         gap:10px;
+        white-space: nowrap;
         font-size: 0.7em;
+        font-weight: 300;
         span{
-            width: 5px;
-            height: 5px;
-            background: #808080;
-            border-radius: 50%;
-        }
-    }
-    .pr-movie__stars{
-        @include mx-flex();
-        @include mx-flex-row();
-        @include mx-flex-align-center();
-        gap:5px;
-        font-size: 0.7em;
-    }
-    .pr-movie__date{
-        @include mx-flex();
-        @include mx-flex-row();
-        @include mx-flex-align-center();
-        margin-right: auto;
-        gap:5px;
-        font-size: 0.7em;
-    }
-    a{
-        font-size: 1.5em;
-        color: $negative-color;
-        cursor: pointer;
-        transition: 0.2s;
-        transform: scale(1);
-        &:hover{
-            transform: scale(1.1);
+            font-size: 1.4em;
+            line-height: 1;
         }
     }
 }
